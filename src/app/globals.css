@@ -1,0 +1,206 @@
+/* ── ITC Souvenir Std Web Font ── */
+@font-face {
+  font-family: "ITC Souvenir Std";
+  src: url("/fonts/itc-souvenir-medium.woff2") format("woff2"),
+       url("/fonts/itc-souvenir-medium.woff") format("woff");
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ITC Souvenir Std";
+  src: url("/fonts/itc-souvenir-bold.woff2") format("woff2");
+  font-weight: 600 700 800 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Candy Circle Brand Fonts — ITC Souvenir Std */
+  --font-sans: "ITC Souvenir Std", Georgia, Cambria, serif;
+  --font-display: "ITC Souvenir Std", Georgia, Cambria, serif;
+  --font-mono: ui-monospace, monospace;
+  --font-heading: var(--font-display);
+
+  /* ── Candy Circle Brand Colors ── */
+  --color-tw-cream: #FFF0E2;
+  --color-tw-text: #3A1D00;
+  --color-tw-yellow: #FFDB45;
+  --color-tw-coral: #ef6c4e;
+  --color-tw-pink: #f19cb0;
+  --color-tw-gold: #f5b731;
+  --color-tw-fruity-red: #E20E23;
+  --color-tw-cocoa: #54170F;
+  --color-tw-honey: #FFB000;
+  --color-tw-cinnamon: #F7703C;
+  --color-tw-cotton-candy: #F7A6D2;
+  --color-tw-sky: #87CEEB;
+  --color-tw-newsletter: #7EC8E3;
+  --color-tw-white: #FFFFFF;
+
+  /* Shadcn tokens */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  --background: #FFF0E2;
+  --foreground: #3A1D00;
+  --card: #FFFFFF;
+  --card-foreground: #3A1D00;
+  --popover: #FFFFFF;
+  --popover-foreground: #3A1D00;
+  --primary: #3A1D00;
+  --primary-foreground: #FFF0E2;
+  --secondary: #FFF0E2;
+  --secondary-foreground: #3A1D00;
+  --muted: #f5e6d4;
+  --muted-foreground: #7a5a3a;
+  --accent: #FFDB45;
+  --accent-foreground: #3A1D00;
+  --destructive: #E20E23;
+  --border: #e8d5c0;
+  --input: #e8d5c0;
+  --ring: #3A1D00;
+  --chart-1: #E20E23;
+  --chart-2: #f19cb0;
+  --chart-3: #F7703C;
+  --chart-4: #FFDB45;
+  --chart-5: #87CEEB;
+  --radius: 1.875rem;
+  --sidebar: #FFF0E2;
+  --sidebar-foreground: #3A1D00;
+  --sidebar-primary: #3A1D00;
+  --sidebar-primary-foreground: #FFF0E2;
+  --sidebar-accent: #f5e6d4;
+  --sidebar-accent-foreground: #3A1D00;
+  --sidebar-border: #e8d5c0;
+  --sidebar-ring: #3A1D00;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    font-family: "ITC Souvenir Std", Georgia, Cambria, serif;
+    background-color: #FFF0E2;
+    color: #3A1D00;
+  }
+  html {
+    font-family: "ITC Souvenir Std", Georgia, Cambria, serif;
+    @apply scroll-smooth;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "ITC Souvenir Std", Georgia, Cambria, serif;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+  button, input, textarea, select {
+    font-family: inherit;
+  }
+}
+
+/* ── Marquee animation for retailer logos ── */
+@keyframes marquee-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ── Star float animation ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(5deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 3s ease-in-out 1s infinite;
+}
+
+.animate-float-slow {
+  animation: float 4s ease-in-out 0.5s infinite;
+}
+
+/* ── Scrollbar hide utility ── */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Candy Circle Cotton Candy Wavy Banner Mask ── */
+.lto-banner-masked {
+  padding-block: 54px;
+  -webkit-mask-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 56' preserveAspectRatio='none'%3E%3Cpath d='M0,28 Q37,0 75,28 Q111,56 150,28 L150,56 L0,56 Z' fill='white'/%3E%3C/svg%3E"),
+    linear-gradient(white, white),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 56' preserveAspectRatio='none'%3E%3Cpath d='M0,28 Q37,56 75,28 Q111,0 150,28 L150,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
+  mask-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 56' preserveAspectRatio='none'%3E%3Cpath d='M0,28 Q37,0 75,28 Q111,56 150,28 L150,56 L0,56 Z' fill='white'/%3E%3C/svg%3E"),
+    linear-gradient(white, white),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 56' preserveAspectRatio='none'%3E%3Cpath d='M0,28 Q37,56 75,28 Q111,0 150,28 L150,0 L0,0 Z' fill='white'/%3E%3C/svg%3E");
+  -webkit-mask-size: 150px 56px, 100% calc(100% - 112px + 4px), 150px 56px;
+  mask-size: 150px 56px, 100% calc(100% - 112px + 4px), 150px 56px;
+  -webkit-mask-position: 0 0, 0 calc(56px - 2px), 0 100%;
+  mask-position: 0 0, 0 calc(56px - 2px), 0 100%;
+  -webkit-mask-repeat: repeat-x, no-repeat, repeat-x;
+  mask-repeat: repeat-x, no-repeat, repeat-x;
+}
