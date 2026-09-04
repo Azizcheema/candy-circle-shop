@@ -1,28 +1,9 @@
 {
   "name": "candy-circle-shop",
-  "version": "0.4.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Candy Circle Shop - Premium Candy & Chocolate Gift Boxes",
-  "author": "JCodesMore",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JCodesMore/ai-website-cloner-template.git"
-  },
-  "homepage": "https://github.com/JCodesMore/ai-website-cloner-template",
-  "bugs": {
-    "url": "https://github.com/JCodesMore/ai-website-cloner-template/issues"
-  },
-  "keywords": [
-    "claude-code",
-    "website-clone",
-    "reverse-engineering",
-    "nextjs",
-    "ai",
-    "template",
-    "tailwindcss",
-    "shadcn-ui"
-  ],
   "engines": {
     "node": ">=24"
   },
